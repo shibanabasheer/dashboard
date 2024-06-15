@@ -1,38 +1,290 @@
-.App {
-  text-align: center;
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logo img {
+  height: 40px;
+  width: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.user-menu-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.dashboard {
+  padding: 20px;
+}
+
+.dashboard h1 {
+  margin-bottom: 20px;
+}
+
+.dashboard-content {
+  display: flex;
+  gap: 20px;
+}
+
+.left-column {
+  flex: 2;
   display: flex;
   flex-direction: column;
+  gap: 20px;
+}
+
+.right-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.portfolio-and-timeline {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.portfolio-chart {
+  flex: 1;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+}
+
+.portfolio-chart .chart {
+  height: 250px; 
+}
+
+.maturity-timeline {
+  flex: 1;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bank-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.bank-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex: 1;
+  margin-bottom: 20px; /* Add some margin between the cards */
+}
+
+.bank-logo img {
+  height: 60px;
+  width: auto;
+}
+
+.bank-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.bank-details h3 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 1.2em;
+}
+
+.bank-details p {
+  font-size: 1em;
+  margin-top: 0.5;
+  /* font-weight: bold; */
+}
+
+.badges {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.badge.highest-rate {
+  background: #EFDDFF 0% 0% no-repeat padding-box;
+  border-radius: 5px;
+  opacity: 0.91;
+}
+
+.badge.rbi-insured {
+  background: #EFDDFF 0% 0% no-repeat padding-box;
+  border-radius: 5px;
+  opacity: 0.91;
+}
+
+.badge.crisil-rated {
+  background: #EFDDFF 0% 0% no-repeat padding-box;
+  border-radius: 5px;
+  opacity: 0.91;
+}
+
+.badge.no-video-kyc {
+  background: #EFDDFF 0% 0% no-repeat padding-box;
+  border-radius: 5px;
+  opacity: 0.91;
+}
+
+.book-now-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #0072BB;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.timeline-chart {
+  margin-top: 20px;
+}
+
+.timeline-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.timeline-label {
+  width: 50px;
+  font-weight: bold;
+}
+
+.timeline-bar {
+  display: flex;
+  flex: 1;
+  height: 30px;
+  position: relative;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+
+.timeline-segment {
+  position: absolute;
+  height: 100%;
+  color: #fff;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 0 10px;
+  border-radius: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.timeline-segment.utkarsh {
+  background-color:#3B39D9;
+  left: 0;
+  width: 20%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.timeline-segment.shriram {
+  background-color: #36a2eb;
+  left: 25%;
+  width: 20%;
+}
+
+.timeline-segment.bajaj {
+  background-color: #3B39D9;
+  left: 50%;
+  width: 20%;
+}
+
+.timeline-segment.mahindra {
+  background-color: #4bc0c0;
+  left: 75%;
+  width: 20%;
+}
+
+.video-kyc-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.video-kyc-card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.video-kyc-card p {
+  margin: 5px 0;
+}
+
+.payment-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.payment-card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.payment-card p {
+  margin: 5px 0;
+}
+
+.faq {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.faq-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.faq-card {
+  flex: 1;
+  min-width: 220px;
 }
